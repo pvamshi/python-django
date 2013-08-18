@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>First page</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static 'mystyle.css' %}">
+        <script type="text/javascript" src="{% static 'jquery-2.0.3.min.js' %}" ></script>
+        <script type="text/javascript" src="{% static 'main.js' %}" ></script>
+    </head>
+    <body>
+        <a url="#"  class='but' id="start" >Start </a>
+        <a url="#" class='but' id="play_pause" >Play/Pause </a>
+        <a url="#"  class='but' id="play" >Play </a>
+        <a url="#"  class='but' id="next" >Next </a>
+        <a url="#"  class='but' id="previous" >Previous </a>
+        {% for article in articles %}
+            <h2>{{ article.title }}</h2>
+            <p>{{ article.pub_date }}</p>
+            <p>{{ article.body }}</p>
+            <p>{{article.likes}}</p>
+            <hr/>
+        {% endfor %}
+    </body>
+</html>

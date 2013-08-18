@@ -1,0 +1,14 @@
+#main_buttn{
+    color:red
+}
+
+
+a{
+    color:white;
+    background:gray;
+    cursor:hand;
+    width:100px;
+    padding:3px;
+    margin:10px;
+    display: block;
+}
